@@ -9,8 +9,9 @@ on:
 
 
   push :
-    paths:
-      - 'routes/*.php'
+#    paths:
+#      - 'routes/*.php'
+#      - 'routes/**.php'
 #    branches:
 #      - master
 #      - main
@@ -20,10 +21,6 @@ on:
 
 #    tags-ignore:
 #      -
-
-
-
-
 
 
 jobs:
