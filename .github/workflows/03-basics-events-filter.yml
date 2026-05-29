@@ -1,10 +1,12 @@
 name: 03-basics-events-filter.yml
 
 on:
-  push :
-    branches:
-      - master
-      - main
+#  push :
+#    branches:
+#      - master
+#      - main
+  pull_request:
+    types: [closed , reopened ]
 
 jobs:
   print-hello-world:
