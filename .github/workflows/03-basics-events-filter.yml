@@ -1,13 +1,27 @@
 name: 03-basics-events-filter.yml
 
 on:
-#  push :
+
+  #  pull_request:
+  #    types: [closed , reopened ]
+  #    branches-ignore:
+  #      - 02_basics-events
+
+
+  push :
+#    paths:
+#      - 'routes/*.php'
+#      - 'routes/**.php'
 #    branches:
 #      - master
 #      - main
 
-  pull_request:
-    types: [closed , reopened ]
+#    tags:
+#      - v2
+
+#    tags-ignore:
+#      -
+
 
 jobs:
   print-hello-world:
