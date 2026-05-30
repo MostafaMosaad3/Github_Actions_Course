@@ -1,0 +1,15 @@
+name: 04-basics-events-trigger.yml
+
+on:
+  repository_dispatch:
+    type: [custom-event]
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "hello world"
+
+
+
