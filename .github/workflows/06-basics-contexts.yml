@@ -10,7 +10,9 @@ jobs:
       - name: Print Hello World
         # run: echo "hello world"
         # run: echo ${{github}}
-        run: echo ${{github.actor}}
+        # run: echo ${{github.actor}}
+        run: echo ${{toJson(github)}}
+        
         
         
 
