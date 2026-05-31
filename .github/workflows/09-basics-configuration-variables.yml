@@ -9,5 +9,11 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello World
+      - name: Print configration variable
         run: echo ${{vars.MY_VARIABLE}}
+
+      - name: print secret variable
+        run: echo ${{secrets.MY_CREDENTIAL_PASSWORD}}
+
+      - name: print default variables
+        run: env      
