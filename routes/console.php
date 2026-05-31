@@ -7,4 +7,5 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-// add new line 
+// add new line
+// add new line
