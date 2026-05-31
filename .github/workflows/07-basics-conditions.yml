@@ -1,0 +1,14 @@
+name: 07-basics-conditions.yml
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "hello world"
+
