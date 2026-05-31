@@ -17,4 +17,4 @@ jobs:
 
       - name: Print Hello World Again
         if: github.event.pull_request.changed_files > 1
-        run: echo "hello world"
+        run: echo "testing the condition"
