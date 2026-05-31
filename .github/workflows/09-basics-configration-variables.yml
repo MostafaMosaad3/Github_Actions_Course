@@ -1,0 +1,13 @@
+name: 09-basics-configration-variables.yml
+run-name: ${{github.actor}} explains configration variables - try number ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "hello world"
