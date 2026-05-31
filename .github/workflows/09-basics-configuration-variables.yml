@@ -1,4 +1,4 @@
-name: 09-basics-configration-variables.yml
+name: 09-basics-configuration-variables.yml
 run-name: ${{github.actor}} explains configration variables - try number ${{github.run_number}}
 
 on:
