@@ -8,4 +8,5 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 // add new line
-// add new line
+// add new line\\\\
+\\\
