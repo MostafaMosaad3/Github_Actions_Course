@@ -9,8 +9,8 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
+
     steps:
       - name: Print Hello World
-      if: github.event.pull_request.changed_files > 1
-      run: echo "hello world"
-
+        if: github.event.pull_request.changed_files > 1
+        run: echo "hello world"
