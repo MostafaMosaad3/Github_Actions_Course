@@ -1,6 +1,8 @@
 name: 08-basics-variables.yml
 run-name: ${{github.actor}} explain env variables - try number ${{github.run_number}}
 
+env:
+  MY_NAME: ${{github.actor}}
 on:
   workflow_dispatch:
 
@@ -10,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
-        run: echo "hello world"
+        run: echo ${{env.MY_NAME}}
 
