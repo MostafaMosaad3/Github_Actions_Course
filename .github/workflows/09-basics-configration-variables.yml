@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo ${{vars.MY_VARIABLE}}
+
+      - name: print hello world 2
+        run: echo ${{secrets.MY_CREDENTIAL_PASSWORD}}
