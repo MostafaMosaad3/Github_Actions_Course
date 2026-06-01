@@ -3,6 +3,7 @@ run-name: ${{github.actor}} explaining expressions - try number ${{github.run_nu
 
 env:
   RUN_NUMBER: ${{github.run_number > 1 && 'Greater Than One' || 'Less Than One'}}
+  TESTING_VALUE: ${{contains('hello wolrd' , 'wor')}}
 
 on:
   workflow_dispatch:
@@ -13,3 +14,7 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo ${{env.RUN_NUMBER}}
+
+      - name: print testing value
+        run: echo ${{env.TESTING_VALUE}}
+     
