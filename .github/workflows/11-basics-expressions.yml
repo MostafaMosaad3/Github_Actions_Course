@@ -2,13 +2,13 @@ name: 11-basics-expressions.yml
 run-name: ${{github.actor}} explaining expressions - try number ${{github.run_number}}
 
 env:
-  RUN_NUMBER: ${{github.run_number}}
+  RUN_NUMBER: ${{github.run_number > 1 && 'Greater Than One' || 'Less Than One'}}
 
 on:
   workflow_dispatch:
 
 jobs:
-  print-hello-number:
+  print-hello-world:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
