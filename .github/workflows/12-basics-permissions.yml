@@ -4,6 +4,8 @@ run-name: ${{github.actor}} explaining permissions - try number ${{github.run_nu
 on:
   workflow_dispatch:
 
+permissions: 
+  issues: write
 
 jobs:
   make-a-practical-example:
