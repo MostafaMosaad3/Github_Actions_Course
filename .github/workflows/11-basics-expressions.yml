@@ -13,8 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
-        run: echo ${{env.RUN_NUMBER}}
+        # run: echo ${{env.RUN_NUMBER}}
+        run: exit 1 
 
       - name: print testing value
+        if: success()
         run: echo ${{env.TESTING_VALUE}}
+
+      - name: testing the expression
+        if: always()
+        run: echo "testing"
+
+
+
+        
      
