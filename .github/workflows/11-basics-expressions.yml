@@ -1,0 +1,15 @@
+name: 11-basics-expressions.yml
+run-name: ${{github.actor}} explaining expressions - try number ${{github.run_number}}
+
+env:
+  RUN_NUMBER: ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-hello-number:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo ${{env.RUN_NUMBER}}

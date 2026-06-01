@@ -1,4 +1,4 @@
-name: practical-example.yml
+name: 10-basics-variables-example.yml
 run-name: ${{github.actor}} try a practical example
 
 on:
