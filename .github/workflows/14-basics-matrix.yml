@@ -8,7 +8,7 @@ on:
 
 jobs:
   Build:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.php}}
     strategy:
       matrix:
         php: [8.2 . 8.3]
