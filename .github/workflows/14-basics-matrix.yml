@@ -18,6 +18,10 @@ jobs:
         exclude:
           - os: ubuntu-latest
             php: 8.2
+            
+        include:
+          - os: mac-latest
+            php: 8.5
 
     steps:
       - name: build project
