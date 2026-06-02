@@ -10,6 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
+      max-parallel: 2
       matrix:
         os: [ubuntu-latest, windows-latest]
         php: [8.2 , 8.3 , 8.4]
