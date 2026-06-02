@@ -1,0 +1,25 @@
+name: 13-basics-needs.yml
+
+run-name: ${{github.actor}} explaining needs - try number ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build dependencies
+        run: exit 1
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test dependencies
+        run: exit 1
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy dependencies
+        run: exit 1
