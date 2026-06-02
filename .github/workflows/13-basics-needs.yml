@@ -13,12 +13,14 @@ jobs:
         run: exit 1
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: test dependencies
         run: echo "test dependencies"
 
   deploy:
+    needs: [build , test]
     runs-on: ubuntu-latest
     steps:
       - name: deploy dependencies
