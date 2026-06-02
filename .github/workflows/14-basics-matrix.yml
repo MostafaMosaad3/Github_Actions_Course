@@ -1,0 +1,15 @@
+name: 14-basics-matrix.yml
+
+run-name: ${{github.actor}} explains matrix - try number ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build project
+        run: echo "build project"
+
