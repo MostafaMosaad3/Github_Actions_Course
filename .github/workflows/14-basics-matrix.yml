@@ -1,19 +1,18 @@
 name: 14-basics-matrix.yml
 
-run-name: ${{github.actor}} explains matrix - try number ${{github.run_number}}
+run-name: ${{ github.actor }} explains matrix - try number ${{ github.run_number }}
 
 on:
   workflow_dispatch:
 
-
 jobs:
   Build:
-    runs-on: ${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
-        os: [ubuntu latest . windows latest ]
-        
+        os: [ubuntu-latest, windows-latest]
+
     steps:
       - name: build project
         run: echo "build project"
-
