@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test dependencies
-        run: exit 1
+        run: echo "test dependencies"
 
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: deploy dependencies
-        run: exit 1
+        run: echo "deploy dependencies"
