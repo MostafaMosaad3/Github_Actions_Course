@@ -8,10 +8,10 @@ on:
 
 jobs:
   Build:
-    runs-on: ${{matrix.php}}
+    runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        php: [8.2 . 8.3]
+        os: [ubuntu-latest . windows-latest ]
         
     steps:
       - name: build project
