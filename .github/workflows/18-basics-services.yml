@@ -15,5 +15,10 @@ jobs:
         image: redis:latest
 
     steps:
+      - name: install redis client
+        run: sudo apt-get install -y redis
+
       - name: check redis connection
         run: redis-cli ping
+
+        
