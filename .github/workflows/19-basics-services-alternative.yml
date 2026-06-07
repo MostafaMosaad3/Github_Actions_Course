@@ -1,0 +1,24 @@
+name: 18-basics-services-alternatives.yml
+
+run-name: ${{github.actor}} explaining services - try number ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  redis-job:
+    runs-on: ubuntu-latest
+
+    services:
+      redis:
+        image: redis:latest
+
+    steps:
+      - name: install redis client
+        run: sudo apt-get install -y redis
+
+      - name: check redis connection
+        run: redis-cli ping
+
+
