@@ -1,0 +1,14 @@
+name: 21-basics-custom-actions-2.yml
+
+run-name: ${{github.actor}} explaining custom action 2 - try number ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello world
+        run: echo "hello world"
