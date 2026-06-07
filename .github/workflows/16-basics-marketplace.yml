@@ -1,0 +1,14 @@
+name: 16-basics-marketplace.yml
+
+run-name: ${{github.actor}} explaining marketplace - try number ${{github.run_number}}
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  php_versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check php version
+        run: php -v 
