@@ -12,7 +12,7 @@ jobs:
 
     container:
       image: php:7.2
-      
+
     steps:
       - name: check php version
-        run: php -v 
+        run: php -v
