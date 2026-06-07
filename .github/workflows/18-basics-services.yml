@@ -7,9 +7,13 @@ on:
 
 
 jobs:
-  php-versions:
-    runs-on: ubuntu-latest
+  redis-job:
+    runs-on: ubuntu-latest 
+
+    services:
+      redis:
+        image: redis:latest
 
     steps:
-      - name: check php version
-        run: php -v
+      - name: check redis connection
+        run: redis-cli ping
