@@ -10,5 +10,10 @@ jobs:
   php_versions:
     runs-on: ubuntu-latest
     steps:
+      - name: setup php version 7.2 
+        uses: nanasess/setup-php@v4
+        with:
+          php-version: '7.2'
+
       - name: check php version
-        run: php -v 
+        run: php -v
