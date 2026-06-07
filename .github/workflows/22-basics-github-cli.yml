@@ -6,8 +6,10 @@ on:
 
 
 jobs:
-  hello-world-job:
+  open-new-issue-job:
     runs-on: ubuntu-latest
     steps:
-      - name: print hello world
-        uses: echo "hello world"
+      - name: open new issue
+        run: gh issue create --title "I found a bug" --body "Nothing works"
+        env:
+         GH_TOKEN : ${{secrets.GITHUB_TOKEN}}
