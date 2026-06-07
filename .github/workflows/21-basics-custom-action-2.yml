@@ -13,6 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.3
 
-        
+
       - name: print hello world
         uses: ./.github/actions/print-hello-world
