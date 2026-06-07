@@ -7,5 +7,5 @@ description: print-hello-world
 runs:
   using: "composite"
   steps:
-    - run: print hello world
+    - run: echo "hello world"
       shell: "bash"

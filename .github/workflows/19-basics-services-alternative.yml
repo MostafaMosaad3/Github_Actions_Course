@@ -1,4 +1,4 @@
-name: 18-basics-services-alternatives.yml
+name: 19-basics-services-alternatives.yml
 
 run-name: ${{github.actor}} explaining services - try number ${{github.run_number}}
 
@@ -10,7 +10,7 @@ jobs:
   redis-job:
     runs-on: ubuntu-latest
 
-    
+
     steps:
       - name: install redis client
         run: sudo apt-get install -y redis
