@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        run: actions/checkout@4.2.2
+        uses: actions/checkout@4.2.2
 
       - name: Comment On Pr
         run: gh pr comment 13 --body "we will not accept your pr , check your code again"
