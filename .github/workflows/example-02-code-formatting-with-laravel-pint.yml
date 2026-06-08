@@ -14,16 +14,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v6.0.3
 
-      - name: Install Laravel Pint
-        run: composer require laravel/pint --dev
-
-      - name: Run Pint
+      - name: Run Laravel Pint
         run: ./vendor/bin/pint
 
-      - name: commit changes back
+      - name: Commit changes back
         run: |
-          git config --local.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+
           git add .
-          git commit -m 'Run Pint'
+
+          git diff --cached --quiet || git commit -m "style: apply Laravel Pint formatting"
+
           git push
