@@ -14,9 +14,10 @@ jobs:
         uses: actions/checkout@v6.0.3
 
       - name: Comment On Pr
-        run: gh pr comment 13 --body "we will not accept your pr , check your code again"
+        run: gh pr comment $PR_NUMBER --body "we will not accept your pr , check your code again"
         env:
           GH_TOKEN : ${{secrets.GITHUB_TOKEN}}
+          PR_NUMBER : ${{github.event.pull_request.number}}
 
 
 
