@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v6.0.3
 
       - name: Install Laravel Pint
-        run: composer require laravel/pint -dev
+        run: composer require laravel/pint --dev
 
       - name: Run Pint
         run: ./vendor/bin/pint
