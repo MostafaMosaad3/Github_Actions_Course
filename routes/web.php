@@ -3,11 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return ['Laravel' => app()->version()];
 });
 
-// testing the tags
-
-// add new line
-
-// add new line
+require __DIR__.'/auth.php';
