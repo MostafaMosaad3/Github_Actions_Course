@@ -27,4 +27,4 @@ jobs:
           php artisan key:generate
 
       - name: run tests
-        run: php artisan test --cpmpact
+        run: php artisan test --compact
