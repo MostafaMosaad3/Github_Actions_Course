@@ -1,0 +1,30 @@
+name: Example 04 - run tests using predefined mysql
+run-name: Example 04 - run tests using predefined mysql
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6.0.3
+
+      - name: Enable MySQL
+        run: sudo systemctl start mysql.service
+
+
+      - name: Install Project Dependencies
+        run: composer install -q
+
+      - name: Prepare Project
+        run:  |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: run tests
+        run: php artisan test --cpmpact
