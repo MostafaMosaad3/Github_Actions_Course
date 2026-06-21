@@ -1,0 +1,24 @@
+name: Example 07 - Deployment
+run-name: Example 07 - Deployment
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup ssh key
+        run: |
+          mkdir -p ~/.ssh
+          echo "{{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 34.45.215.234 >> ~/.ssh/known_hosts
+
+      - name: deploy to google cloud
+        run: |
+          ssh -o StrictHostKeyChecking=no mostafamosaad202mostafamosaad202@34.45.215.23434.45.215.234"cd ~//project/Github_Actions_Course && git pull origin master"
+
+
