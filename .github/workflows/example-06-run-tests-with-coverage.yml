@@ -31,7 +31,7 @@ jobs:
           php artisan key:generate
 
       - name: run tests
-        run: php artisan test --coverage
+        run: XDEBUG_MODE=coverage php artisan test --coverage
 
 
 
