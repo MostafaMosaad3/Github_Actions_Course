@@ -1,19 +1,12 @@
-name:
-  Example 05 - run tests using mysql as service
-
-run-name:
-  Example 05 - run tests using mysql as service
+name: 06 example - run tests with coverage
+run-name: 06 example - run tests with coverage
 
 on:
   workflow_dispatch:
 
-
-
 jobs:
-  run_tests_with_my_sql_as_service:
-
+  run-tests:
     runs-on: ubuntu-latest
-
 
     services:
       mysql:
@@ -38,6 +31,7 @@ jobs:
           php artisan key:generate
 
       - name: run tests
-        run: php artisan test --compact
+        run: php artisan test --coverage
+
 
 
