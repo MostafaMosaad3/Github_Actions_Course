@@ -19,6 +19,6 @@ jobs:
 
       - name: deploy to google cloud
         run: |
-          ssh -o StrictHostKeyChecking=no mostafamosaad202@34.45.215.23434.45.215.234"cd ~/project/Github_Actions_Course && git pull origin master"
+          ssh -o StrictHostKeyChecking=no mostafamosaad202@34.45.215.234 "cd ~/project/Github_Actions_Course && git pull origin master"
 
 
